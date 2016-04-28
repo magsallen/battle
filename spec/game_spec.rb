@@ -38,4 +38,11 @@ describe Game do
     end
   end
 
+  describe 'game over' do
+    it 'should end the game when a player reaches 0HP' do
+      allow(player_1).to receive(:hit_points) { 0 }
+      expect(game).to be_over
+    end
+  end
+
 end

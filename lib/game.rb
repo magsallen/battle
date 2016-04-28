@@ -8,6 +8,10 @@ class Game
     @players = [player_1, player_2]
   end
 
+  def self.create_game(player_1, player_2)
+    self.new(player_1, player_2)
+  end
+
   def player_1
     @player_1
   end

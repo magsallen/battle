@@ -5,7 +5,6 @@ class Player
   DEFAULT_HP = 100
   DEFAULT_DAMAGE = 10
 
-
   def initialize(name)
     @name = name
     @hit_points = DEFAULT_HP

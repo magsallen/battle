@@ -1,4 +1,7 @@
-<h4><%= @game.player_1.name %> attacked <%= @game.player_2.name %> :( </h4>
+<h1><%= @game.current_player.name %> attacked <%= @game.opponent.name %></h1>
+
+<h4>Current Score</h4>
+<h4><%= @game.player_1.name %> <%= @game.player_1.hit_points %> hit points </h4>
 <h4><%= @game.player_2.name %> <%= @game.player_2.hit_points %> hit points </h4>
 
 <form action="switch" method="get" >

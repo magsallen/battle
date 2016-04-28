@@ -25,16 +25,16 @@ describe Game do
     end
   end
 
+  describe 'current player' do
+    it 'should be able to tell who\'s turn it it' do
+      expect(game.current_player).to eq(player_1)
+    end
+  end
+
   describe 'switching turns' do
     it 'should be able to switch turns' do
       game.switch_turns
       expect(game.current_player).to eq(player_2)
-    end
-  end
-
-  describe 'current player' do
-    it 'should be able to tell who\'s turn it it' do
-      expect(game.current_player).to eq(player_1)
     end
   end
 

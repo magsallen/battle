@@ -18,4 +18,13 @@ class Game
     opponent.receive_damage
   end
 
+  def current_player
+    @players[0]
+  end
+
+  def switch_turns
+    @players.reverse!
+  end
+    
+
 end

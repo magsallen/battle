@@ -21,6 +21,11 @@ class Battle < Sinatra::Base
     erb(:play)
   end
 
+  get '/switch' do
+    $game.switch_turns
+    redirect'/play'
+  end
+
   post '/attack' do
     @game = $game
     @game.attack(@game.player_2)

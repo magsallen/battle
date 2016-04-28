@@ -12,4 +12,17 @@ describe Game do
       game.attack(player_1)
     end
   end
+
+  describe '#player1' do
+    it 'should return the player 1 object' do
+      expect(game.player_1).to eq player_1
+    end
+  end
+
+  describe '#player2' do
+    it 'should return the player 2 object' do
+      expect(game.player_2).to eq player_2
+    end
+  end
+
 end

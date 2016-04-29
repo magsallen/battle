@@ -1,10 +1,12 @@
 <head>
   <link rel="stylesheet" type="text/css" href="/attack.css" />
   <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
   <center>
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/FfPFtbJAEm8?autoplay=1"allowfullscreen></iframe>
 
     <h1><%= @game.current_player.name %> attacked <%= @game.opponent.name %></h1>
 
@@ -13,7 +15,7 @@
     <h4><%= @game.player_2.name %>: <%= @game.player_2.hit_points %> hit points </h4>
 
     <form action="switch" method="get" >
-      <input type="submit" value="End Turn" >
+      <input type="submit" value="End Turn">
     </form>
   </center>
 </body>

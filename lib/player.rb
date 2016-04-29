@@ -2,8 +2,7 @@ class Player
 
   attr_reader :name
   attr_accessor :hit_points
-  DEFAULT_HP = 100
-  DEFAULT_DAMAGE = 10
+  DEFAULT_HP = 50
 
   def initialize(name)
     @name = name
@@ -11,7 +10,11 @@ class Player
   end
 
   def receive_damage
-    @hit_points -= DEFAULT_DAMAGE
+    @hit_points -= damage
+  end
+
+  def damage
+    (10*rand).ceil
   end
 
 end

@@ -1,9 +1,19 @@
-<h1><%= @game.current_player.name %> attacked <%= @game.opponent.name %></h1>
+<head>
+  <link rel="stylesheet" type="text/css" href="/attack.css" />
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+</head>
 
-<h4>Current Score</h4>
-<h4><%= @game.player_1.name %> <%= @game.player_1.hit_points %> hit points </h4>
-<h4><%= @game.player_2.name %> <%= @game.player_2.hit_points %> hit points </h4>
+<body>
+  <center>
 
-<form action="switch" method="get" >
-  <input type="submit" value="End Turn">
-</form>
+    <h1><%= @game.current_player.name %> attacked <%= @game.opponent.name %></h1>
+
+    <h4>Current Score</h4>
+    <h4><%= @game.player_1.name %>: <%= @game.player_1.hit_points %> hit points </h4>
+    <h4><%= @game.player_2.name %>: <%= @game.player_2.hit_points %> hit points </h4>
+
+    <form action="switch" method="get" >
+      <input type="submit" value="End Turn" >
+    </form>
+  </center>
+</body>

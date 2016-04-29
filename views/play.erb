@@ -1,19 +1,32 @@
-<h1><%=@game.player_1.name%> vs. <%=@game.player_2.name%></h1>
+<head>
+  <link rel="stylesheet" type="text/css" href="play.css" />
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+</head>
 
-<h4>Current Score</h4>
-<h4><%=@game.player_1.name%> : <%=@game.player_1.hit_points %> Hit points</h4>
-<h4><%=@game.player_2.name%> : <%=@game.player_2.hit_points %> Hit points</h4>
+<body>
+  <center>
+    <div id="header1">
+      <h1><%=@game.player_1.name%> vs. <%=@game.player_2.name%></h1>
+    </div>
 
-<% unless @game.over? %>
-  <h2>It's <%=@game.current_player.name%>'s turn</h2>
 
-  <h4>Actions Available:</h4>
-  <form action="/attack" method ="post">
-  <input type="submit" value ='ATTACK'>
-  </form>
-<% end %>
+    <h4>Current Score</h4>
+    <h4><%=@game.player_1.name%> : <%=@game.player_1.hit_points %> Hit points</h4>
+    <h4><%=@game.player_2.name%> : <%=@game.player_2.hit_points %> Hit points</h4>
 
-<% if @game.over? %>
-<h1>GAME OVER<h1>
-  <h2>The winner is <%= @game.opponent.name %>!!!<h2>
-<% end %>
+    <% unless @game.over? %>
+      <h2>It's <%=@game.current_player.name%>'s turn</h2>
+
+      <h4>Actions Available:</h4>
+      <form  action="/attack" method ="post">
+      <input type="submit" value ='ATTACK'>
+      </form>
+    <% end %>
+
+    <% if @game.over? %>
+    <h1>GAME OVER<h1>
+      <h2>The winner is <%= @game.opponent.name %>!!!<h2>
+    <% end %>
+
+  </center>
+</body>
